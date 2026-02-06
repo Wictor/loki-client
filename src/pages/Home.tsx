@@ -35,129 +35,76 @@ export function Home({ onCreateGame, onJoinGame }: HomeProps) {
       <div className="w-full max-w-md space-y-8">
         {/* Title */}
         <div className="text-center">
-          <div className="flex flex-col items-center mb-4">
-            {/* Loki Logo - Trickster Mask with Paintbrush */}
+          <div className="flex flex-col items-center mb-2">
+            {/* Pixelated Painter Icon */}
             <svg
-              width="100"
-              height="100"
-              viewBox="0 0 120 120"
+              width="120"
+              height="120"
+              viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="mb-3"
+              style={{ imageRendering: 'pixelated' }}
             >
-              {/* Horns */}
-              <path
-                d="M30 45 Q25 25, 20 15 Q18 10, 22 8 Q26 10, 28 15 L35 40"
-                fill="url(#hornGradient)"
-                stroke="#10b981"
-                strokeWidth="2"
-              />
-              <path
-                d="M90 45 Q95 25, 100 15 Q102 10, 98 8 Q94 10, 92 15 L85 40"
-                fill="url(#hornGradient)"
-                stroke="#10b981"
-                strokeWidth="2"
-              />
+              {/* Beret */}
+              <rect x="5" y="0" width="6" height="1" fill="#e74c3c" />
+              <rect x="4" y="1" width="8" height="1" fill="#c0392b" />
+              <rect x="3" y="2" width="10" height="1" fill="#e74c3c" />
+              {/* Beret pom-pom */}
+              <rect x="7" y="0" width="2" height="1" fill="#f39c12" />
 
-              {/* Mask/Face */}
-              <ellipse
-                cx="60"
-                cy="60"
-                rx="32"
-                ry="38"
-                fill="url(#maskGradient)"
-                stroke="#3b82f6"
-                strokeWidth="2.5"
-              />
+              {/* Hair */}
+              <rect x="4" y="3" width="1" height="2" fill="#d4a574" />
+              <rect x="11" y="3" width="1" height="2" fill="#d4a574" />
 
-              {/* Eye holes - trickster slant */}
-              <ellipse
-                cx="50"
-                cy="55"
-                rx="6"
-                ry="10"
-                fill="#1f2937"
-                transform="rotate(-15 50 55)"
-              />
-              <ellipse
-                cx="70"
-                cy="55"
-                rx="6"
-                ry="10"
-                fill="#1f2937"
-                transform="rotate(15 70 55)"
-              />
+              {/* Face */}
+              <rect x="5" y="3" width="6" height="4" fill="#f5cba7" />
+              {/* Eyes */}
+              <rect x="6" y="4" width="1" height="1" fill="#2c3e50" />
+              <rect x="9" y="4" width="1" height="1" fill="#2c3e50" />
+              {/* Mustache */}
+              <rect x="5" y="6" width="2" height="1" fill="#8b4513" />
+              <rect x="9" y="6" width="2" height="1" fill="#8b4513" />
+              <rect x="7" y="6" width="2" height="1" fill="#a0522d" />
+              {/* Beard */}
+              <rect x="6" y="7" width="4" height="1" fill="#8b4513" />
 
-              {/* Eye glints */}
-              <circle cx="48" cy="52" r="2" fill="#3b82f6" opacity="0.8" />
-              <circle cx="72" cy="52" r="2" fill="#3b82f6" opacity="0.8" />
+              {/* Body / Smock */}
+              <rect x="4" y="8" width="8" height="3" fill="#3498db" />
+              <rect x="5" y="8" width="6" height="1" fill="#2980b9" />
+              {/* Paint splats on smock */}
+              <rect x="5" y="9" width="1" height="1" fill="#e74c3c" />
+              <rect x="9" y="10" width="1" height="1" fill="#f1c40f" />
+              <rect x="7" y="10" width="1" height="1" fill="#2ecc71" />
 
-              {/* Mischievous smile */}
-              <path
-                d="M45 70 Q60 80, 75 70"
-                stroke="#10b981"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                fill="none"
-              />
+              {/* Left arm holding palette */}
+              <rect x="2" y="9" width="2" height="1" fill="#f5cba7" />
+              <rect x="1" y="10" width="3" height="2" fill="#f39c12" />
+              {/* Paint dots on palette */}
+              <rect x="1" y="10" width="1" height="1" fill="#e74c3c" />
+              <rect x="3" y="10" width="1" height="1" fill="#3498db" />
+              <rect x="2" y="11" width="1" height="1" fill="#2ecc71" />
 
-              {/* Paintbrush crossing diagonally */}
-              <g transform="rotate(-35 60 60)">
-                {/* Brush handle */}
-                <rect
-                  x="75"
-                  y="35"
-                  width="5"
-                  height="50"
-                  rx="2"
-                  fill="#f59e0b"
-                  stroke="#d97706"
-                  strokeWidth="1"
-                />
-                {/* Brush ferrule */}
-                <rect
-                  x="74"
-                  y="82"
-                  width="7"
-                  height="8"
-                  fill="#78716c"
-                  stroke="#57534e"
-                  strokeWidth="1"
-                />
-                {/* Brush bristles */}
-                <path
-                  d="M74 90 L72 100 L77.5 102 L83 100 L81 90 Z"
-                  fill="#3b82f6"
-                  stroke="#2563eb"
-                  strokeWidth="1"
-                />
-                {/* Paint drip */}
-                <circle cx="77.5" cy="103" r="2" fill="#3b82f6" opacity="0.7" />
-              </g>
+              {/* Right arm holding brush */}
+              <rect x="12" y="9" width="2" height="1" fill="#f5cba7" />
+              {/* Paintbrush */}
+              <rect x="13" y="7" width="1" height="3" fill="#d4a574" />
+              <rect x="13" y="6" width="1" height="1" fill="#9b59b6" />
+              {/* Paint drip from brush */}
+              <rect x="13" y="5" width="1" height="1" fill="#9b59b6" opacity="0.6" />
 
-              {/* Decorative stars/sparkles */}
-              <path d="M15 60 L17 62 L15 64 L13 62 Z" fill="#10b981" opacity="0.6" />
-              <path d="M105 60 L107 62 L105 64 L103 62 Z" fill="#10b981" opacity="0.6" />
-              <path d="M60 15 L62 17 L60 19 L58 17 Z" fill="#3b82f6" opacity="0.6" />
+              {/* Legs */}
+              <rect x="5" y="11" width="2" height="2" fill="#2c3e50" />
+              <rect x="9" y="11" width="2" height="2" fill="#2c3e50" />
+              {/* Shoes */}
+              <rect x="4" y="13" width="3" height="1" fill="#8b4513" />
+              <rect x="9" y="13" width="3" height="1" fill="#8b4513" />
 
-              {/* Gradients */}
-              <defs>
-                <linearGradient id="hornGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#10b981" stopOpacity="0.9" />
-                  <stop offset="100%" stopColor="#059669" stopOpacity="0.7" />
-                </linearGradient>
-                <linearGradient id="maskGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#1e3a8a" stopOpacity="0.4" />
-                  <stop offset="50%" stopColor="#1e40af" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="#1e293b" stopOpacity="0.5" />
-                </linearGradient>
-              </defs>
+              {/* Easel behind (subtle) */}
+              <rect x="0" y="4" width="1" height="8" fill="#78716c" opacity="0.4" />
+              <rect x="15" y="4" width="1" height="8" fill="#78716c" opacity="0.4" />
+              <rect x="0" y="4" width="16" height="1" fill="#78716c" opacity="0.2" />
             </svg>
-
-            {/* Stylized LOKI text */}
-            <h1 className="text-5xl font-bold tracking-wider bg-gradient-to-r from-blue-400 via-green-400 to-blue-500 bg-clip-text text-transparent">
-              LOKI
-            </h1>
           </div>
           <p className="text-gray-400 text-lg">Fake Artist Goes to New York</p>
         </div>
